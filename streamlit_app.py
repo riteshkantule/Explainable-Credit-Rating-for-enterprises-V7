@@ -32,7 +32,7 @@ except ImportError:
 
 # Page configuration
 st.set_page_config(
-    page_title="CredTech - Advanced Credit Intelligence Platform",
+    page_title="Explainable Credit Intelligence System",
     page_icon="🏦",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -330,7 +330,6 @@ class RealTimeDataCollector:
             'fmp': bool(self.fmp_key),
             'eodhd': bool(self.eodhd_key),
             'marketaux': bool(self.marketaux_key),
-            'rapidapi': bool(self.rapidapi_key),
             'yahoo_finance': True  # Always available
         }
         
@@ -1414,7 +1413,7 @@ def main():
     api_status = collector.get_api_status()
     
     # Header
-    st.markdown('<h1 class="main-header">🏦 CredTech Advanced Analytics</h1>', unsafe_allow_html=True)
+    st.markdown('<h1 class="main-header">🏦 Explainable Credit Intelligence System</h1>', unsafe_allow_html=True)
     st.markdown('<p class="sub-header">Real-Time Credit Intelligence with Causality Analysis & News Sentiment</p>', unsafe_allow_html=True)
     
     # Initialize session state for data
@@ -1497,13 +1496,13 @@ def main():
         **Active Data Sources:**
         {chr(10).join(f'• {source} ✅' for source in available_sources)}
         
-        **AI Features:**
+        AI/ML Features:
         • TextBlob NLP sentiment analysis
         • Multi-source data fusion
         • Real-time credit scoring
         • Causality analysis
         
-        **Weighting:**
+        Weighting:
         • Financial Strength: 35%
         • Market Performance: 25% 
         • News Sentiment: 25%
@@ -1528,12 +1527,12 @@ def main():
                     api_display = api_name.replace('_', ' ').title()
                     st.write(f"• {api_display}")
         
-        with col2:
-            st.markdown("**❌ Missing APIs:**")
-            for api_name, status in api_status.items():
-                if not status and api_name != 'yahoo_finance':
-                    api_display = api_name.replace('_', ' ').title()
-                    st.write(f"• {api_display}")
+        # with col2:
+        #     st.markdown("**❌ Missing APIs:**")
+        #     for api_name, status in api_status.items():
+        #         if not status and api_name != 'yahoo_finance':
+        #             api_display = api_name.replace('_', ' ').title()
+        #             st.write(f"• {api_display}")
         
         # Show env file status
         if ENV_LOADED:
@@ -1802,7 +1801,7 @@ def main():
             st.dataframe(stats_df.round(4), use_container_width=True)
     
     with tab5:
-        st.header("⚖️ Multi-Company Comparative Analysis")
+        st.header("Multi-Company Comparative Analysis")
         
         # Select multiple companies for comparison
         selected_companies = st.multiselect(
@@ -1866,7 +1865,7 @@ def main():
     st.markdown("---")
     st.markdown("""
     <div style='text-align: center; color: #6c757d; font-family: Inter, sans-serif;'>
-        <p>🏆 <strong>CredTech Advanced Analytics Platform</strong> - Hackathon 2025</p>
+        <p>🏆 <strong>Explainable Credit Intelligence System</strong></p>
         <p>Real-Time News Sentiment • Multi-Source Intelligence • Causality Analysis • Interactive Insights</p>
         <p>Built with ❤️ using Streamlit • Alpha Vantage • Yahoo Finance • EODHD • Financial Modeling Prep</p>
     </div>
