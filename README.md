@@ -2,7 +2,7 @@
 
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](http://your-app-url.com)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://explainable-credit-intelligence-for-enterprises.streamlit.app/)
 
 A real-time explainable credit intelligence platform that continuously ingests multi-source financial data, generates dynamic creditworthiness scores, and provides transparent, evidence-backed explanations for investment and regulatory decisions.
 
